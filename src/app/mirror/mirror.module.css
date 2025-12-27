@@ -1,0 +1,176 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gold Sparks Animation */
+.container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 50% 50%, rgba(253, 224, 71, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.sparks {
+    position: absolute;
+    inset: 0;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.3;
+    animation: stardustMove 30s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes stardustMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 500px 500px;
+    }
+}
+
+.header {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.backLink {
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition-smooth);
+}
+
+.backLink:hover {
+    opacity: 1;
+    transform: translateX(-5px);
+}
+
+.header h1 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Glowing Canvas Container */
+.canvasWrapper {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.canvas {
+    width: 100%;
+    min-height: 500px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 3rem;
+    color: #333;
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    border: none;
+    resize: none;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.1),
+        inset 0 0 20px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.canvas:focus {
+    outline: none;
+    box-shadow: 0 0 150px rgba(255, 255, 255, 0.2);
+}
+
+.canvas::placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+
+/* Decorative Gold Prompts */
+.prompts {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+
+.prompt {
+    position: absolute;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: rgba(253, 224, 71, 0.6);
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.prompt1 {
+    top: -40px;
+    right: -80px;
+}
+
+.prompt2 {
+    bottom: -20px;
+    left: -100px;
+}
+
+.prompt3 {
+    bottom: -60px;
+    right: -40px;
+}
+
+/* Glowing Pill Button */
+.sendButton {
+    background: linear-gradient(to bottom, #fde047 0%, #f59e0b 100%);
+    color: #000;
+    padding: 1rem 4rem;
+    border-radius: 50px;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 0 30px rgba(253, 224, 71, 0.4);
+}
+
+.sendButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(253, 224, 71, 0.6);
+}
+
+.footerHint {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .canvas {
+        min-height: 400px;
+        padding: 2rem;
+    }
+
+    .prompt {
+        display: none;
+    }
+}
