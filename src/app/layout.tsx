@@ -4,6 +4,22 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Алеф — Внутренний атлас судьбы",
   description: "Экосистема для перепросмотра, трансформации и цифрового наследия души.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
+  openGraph: {
+    title: "Алеф — Внутренний атлас судьбы",
+    description: "Навигация по ландшафтам памяти и цифровое бессмертие.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Aleph Sanctuary Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
