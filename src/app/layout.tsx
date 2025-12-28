@@ -3,15 +3,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aleph-os.vercel.app"),
-  title: "Алеф — Внутренний атлас судьбы",
-  description: "Экосистема для перепросмотра, трансформации и цифрового наследия души.",
+  title: "Aleph — Internal Atlas of Destiny",
+  description: "A sanctuary for reflection, transformation, and digital soul legacy.",
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Алеф — Внутренний атлас судьбы",
-    description: "Навигация по ландшафтам памяти и цифровое бессмертие.",
+    title: "Aleph — Internal Atlas of Destiny",
+    description: "Preserve your essence in the digital sanctuary.",
     url: "https://aleph-os.vercel.app",
     siteName: "Aleph Sanctuary",
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         alt: "Aleph Sanctuary Logo",
       },
     ],
-    locale: "ru_RU",
+    locale: "en_US",
     type: "website",
   },
 };
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="en">
       <body className="antialiased">
         {children}
       </body>
