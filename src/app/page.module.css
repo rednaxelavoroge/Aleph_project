@@ -73,8 +73,19 @@
 
 .centerLabels {
   position: absolute;
-  top: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
+  margin-top: 140px;
+  /* Push below the SVG */
+}
+
+.mainCtaContainer {
+  display: block;
+  margin-top: 2rem;
+  text-decoration: none;
 }
 
 .title {
@@ -175,6 +186,31 @@
   background: var(--accent-cyan);
   color: var(--bg-deep);
   box-shadow: 0 0 40px var(--accent-cyan);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.footerContent {
+  text-align: center;
+}
+
+.footerSlogan {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  opacity: 0.6;
 }
 
 @media (max-width: 1200px) {

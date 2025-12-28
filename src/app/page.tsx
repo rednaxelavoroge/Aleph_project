@@ -33,7 +33,7 @@ const DIMENSIONS = [
   {
     id: 3,
     title: "ETHEREAL INSIGHTS",
-    description: "Insights glowing glass. High-end glassmorphism with bioluminescent accents for your journey.",
+    description: "Deep dive into your digital soul legacy. Explore insights generated through your transcendental journey.",
     icon: (
       <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
         <rect x="25" y="25" width="50" height="50" stroke="var(--accent-teal)" strokeWidth="1" transform="rotate(45 50 50)" />
@@ -130,8 +130,10 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className={styles.footer} style={{ borderTop: 'none', background: 'transparent' }}>
-        <p className={styles.footerSlogan}>Preserve your essence. Transcend time.</p>
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <p className={styles.footerSlogan}>Preserve your essence. Transcend time.</p>
+        </div>
       </footer>
     </main>
   );
