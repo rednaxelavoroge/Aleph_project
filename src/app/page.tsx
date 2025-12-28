@@ -122,9 +122,9 @@ export default function Home() {
             </div>
           </div>
 
-          <Link href="/dashboard">
+          <Link href="/dashboard" className={styles.mainCtaContainer}>
             <button className={styles.ctaButton}>
-              Glowing Glass
+              Enter Sanctuary
             </button>
           </Link>
         </div>
